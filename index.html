@@ -31,23 +31,12 @@
 }
 html,body{height:100%;background:#c8c4bc;}
 body{display:flex;justify-content:center;align-items:flex-start;padding:20px 0 40px;font-family:'DM Sans',sans-serif;}
-.phone{
-  width:390px;min-height:844px;background:var(--bg);
-  border-radius:40px;overflow:hidden;
-  border:6px solid #1c1b17;
-  box-shadow:0 32px 80px rgba(0,0,0,0.35);
-  display:flex;flex-direction:column;
-  transition:background .3s;
-  position:relative;
-}
-@media(max-width:420px){
-  body{padding:0;align-items:flex-start;}
-  .phone{width:100vw;min-height:100vh;border-radius:0;border:none;}
-}
+.phone{width:390px;min-height:844px;background:var(--bg);border-radius:40px;overflow:hidden;border:6px solid #1c1b17;box-shadow:0 32px 80px rgba(0,0,0,0.35);display:flex;flex-direction:column;transition:background .3s;position:relative;}
+@media(max-width:420px){body{padding:0;}  .phone{width:100vw;min-height:100vh;border-radius:0;border:none;}}
 .status{display:flex;justify-content:space-between;padding:12px 22px 4px;font-size:12px;font-weight:500;color:var(--text2);background:var(--bg);flex-shrink:0;}
 .screen{display:none;flex-direction:column;flex:1;min-height:0;}
 .screen.active{display:flex;}
-.topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 18px 10px;background:var(--bg);border-bottom:1px solid var(--border);flex-shrink:0;}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 18px;background:var(--bg);border-bottom:1px solid var(--border);flex-shrink:0;}
 .logo{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--text);}
 .logo em{color:var(--accent);font-style:normal;}
 .top-actions{display:flex;gap:8px;}
@@ -59,12 +48,10 @@ body{display:flex;justify-content:center;align-items:flex-start;padding:20px 0 4
 @media(max-width:420px){.bnav{width:100vw;}}
 .bi{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;border:none;background:transparent;font-family:'DM Sans',sans-serif;padding:2px 0;}
 .bi-icon{font-size:20px;line-height:1;}
-.bi-label{font-size:10px;color:var(--text3);font-weight:400;}
+.bi-label{font-size:10px;color:var(--text3);}
 .bi.active .bi-label{color:var(--accent);font-weight:600;}
 .bi-dot{width:4px;height:4px;border-radius:50%;background:var(--accent);margin-top:1px;opacity:0;}
 .bi.active .bi-dot{opacity:1;}
-
-/* BUTTONS */
 .btn-p{display:block;width:100%;padding:14px;border-radius:14px;background:var(--btn-bg);color:var(--btn-text);font-size:15px;font-weight:700;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;text-align:center;transition:opacity .2s;letter-spacing:.2px;}
 .btn-p:hover{opacity:.88;}
 .btn-p:disabled{opacity:.45;cursor:not-allowed;}
@@ -73,8 +60,6 @@ body{display:flex;justify-content:center;align-items:flex-start;padding:20px 0 4
 .btn-sm{padding:9px 18px;border-radius:10px;background:var(--btn-bg);color:var(--btn-text);font-size:13px;font-weight:700;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;transition:opacity .2s;}
 .btn-sm:hover{opacity:.88;}
 .btn-sm-o{padding:9px 18px;border-radius:10px;background:var(--btn-o-bg);color:var(--btn-o-text);font-size:13px;font-weight:600;border:2px solid var(--btn-o-border);cursor:pointer;font-family:'DM Sans',sans-serif;transition:opacity .2s;}
-
-/* FORMS */
 .fg{margin-bottom:13px;}
 .fg label{display:block;font-size:11px;color:var(--text3);margin-bottom:5px;letter-spacing:.3px;font-weight:700;}
 .fg input,.fg select,.fg textarea{width:100%;padding:12px 14px;background:var(--bg2);border:2px solid var(--border2);border-radius:12px;color:var(--text);font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border-color .2s;}
@@ -82,19 +67,13 @@ body{display:flex;justify-content:center;align-items:flex-start;padding:20px 0 4
 .fg textarea{resize:none;line-height:1.6;}
 .fg select option{background:var(--bg);}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-
-/* CARDS */
 .card{background:var(--card);border-radius:14px;border:1px solid var(--border2);box-shadow:var(--shadow);padding:14px;margin:0 18px 10px;}
 .sec-title{font-size:11px;font-weight:700;color:var(--text3);letter-spacing:.5px;padding:0 18px;margin-bottom:9px;}
-
-/* LANDING */
 .badge{display:inline-block;padding:5px 13px;border-radius:20px;background:var(--accent-bg);color:var(--accent);font-size:11px;font-weight:700;border:1.5px solid var(--accent-border);}
 .feat-item{display:flex;align-items:flex-start;gap:12px;padding:14px;background:var(--card);border-radius:14px;border:1px solid var(--border2);box-shadow:var(--shadow);margin-bottom:10px;}
 .feat-ic{width:38px;height:38px;border-radius:11px;background:var(--accent-bg);border:1.5px solid var(--accent-border);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;}
 .feat-item h3{font-size:13px;font-weight:600;color:var(--text);margin-bottom:3px;}
 .feat-item p{font-size:12px;color:var(--text2);line-height:1.5;}
-
-/* DASHBOARD */
 .stat{background:var(--card);border-radius:13px;padding:12px 10px;border:1px solid var(--border2);box-shadow:var(--shadow);}
 .stat-l{font-size:10px;color:var(--text3);letter-spacing:.3px;margin-bottom:4px;font-weight:600;}
 .stat-v{font-family:'Syne',sans-serif;font-size:24px;font-weight:700;color:var(--text);}
@@ -124,20 +103,26 @@ body{display:flex;justify-content:center;align-items:flex-start;padding:20px 0 4
 .pfill{height:100%;border-radius:2px;background:var(--accent);}
 .bscore{font-family:'Syne',sans-serif;font-size:22px;font-weight:700;color:var(--accent);}
 
-/* CERTIFICADOS */
+/* UPLOAD */
 .cert-tabs{display:flex;margin:14px 18px 0;border-radius:12px;overflow:hidden;border:2px solid var(--border2);background:var(--bg2);}
 .ctab{flex:1;padding:10px;font-size:13px;font-weight:600;border:none;background:transparent;color:var(--text2);cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;}
 .ctab.active{background:var(--card);color:var(--accent);}
 .cert-panel{display:none;padding:14px 18px;}
 .cert-panel.active{display:block;}
-.upload-zone{border:2px dashed var(--accent-border);border-radius:14px;padding:30px 18px;text-align:center;background:var(--accent-bg);margin-bottom:14px;cursor:pointer;transition:all .2s;}
+.upload-zone{border:2px dashed var(--accent-border);border-radius:14px;padding:30px 18px;text-align:center;background:var(--accent-bg);margin-bottom:14px;cursor:pointer;transition:all .2s;position:relative;}
 .upload-zone:hover{border-color:var(--accent);}
+.upload-zone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
 .fmt-tag{padding:4px 11px;border-radius:8px;font-size:11px;font-weight:700;background:var(--bg2);color:var(--text3);border:1.5px solid var(--border2);}
 .upl-item{display:flex;align-items:center;gap:10px;padding:11px 13px;background:var(--card);border-radius:12px;border:1px solid var(--border2);margin-bottom:8px;box-shadow:var(--shadow);}
 .upl-ic{width:34px;height:34px;border-radius:9px;background:var(--accent-bg);border:1px solid var(--accent-border);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
 .upl-name{font-size:12px;font-weight:600;color:var(--text);}
 .upl-sub{font-size:10px;color:var(--text3);margin-top:2px;}
-.upl-status{margin-left:auto;font-size:10px;font-weight:700;padding:3px 9px;border-radius:8px;background:var(--accent-bg);color:var(--accent);border:1px solid var(--accent-border);white-space:nowrap;}
+.upl-status{margin-left:auto;font-size:10px;font-weight:700;padding:3px 9px;border-radius:8px;white-space:nowrap;}
+.upl-status.ok{background:var(--accent-bg);color:var(--accent);border:1px solid var(--accent-border);}
+.upl-status.loading{background:var(--amber-bg);color:var(--amber);border:1px solid var(--amber-border);}
+.upl-status.err{background:var(--red-bg);color:var(--red);border:1px solid var(--red-border);}
+.upload-progress{height:4px;background:var(--bg2);border-radius:2px;margin-top:8px;overflow:hidden;display:none;}
+.upload-progress-fill{height:100%;background:var(--accent);border-radius:2px;transition:width .3s;}
 
 /* TRILHA */
 .ttab{padding:7px 14px;border-radius:20px;font-size:12px;font-weight:600;border:2px solid var(--border2);background:transparent;color:var(--text2);cursor:pointer;white-space:nowrap;font-family:'DM Sans',sans-serif;transition:all .2s;}
@@ -198,19 +183,24 @@ body{display:flex;justify-content:center;align-items:flex-start;padding:20px 0 4
 .stream-box{margin:0 18px 10px;padding:14px;background:var(--card);border-radius:14px;border:1px solid var(--border2);box-shadow:var(--shadow);font-size:13px;color:var(--text);line-height:1.8;min-height:60px;white-space:pre-wrap;}
 .cursor{display:inline-block;width:2px;height:14px;background:var(--accent);animation:blink .7s step-end infinite;vertical-align:middle;margin-left:2px;}
 @keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
+
+/* TOAST */
+.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--text);color:var(--bg);padding:10px 20px;border-radius:12px;font-size:13px;font-weight:600;opacity:0;transition:all .3s;z-index:999;pointer-events:none;white-space:nowrap;}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
 </style>
 </head>
 <body>
 <div class="phone" id="phone">
   <div class="status"><span>9:41</span><span>Vithae</span></div>
 
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
   <!-- ===== LANDING ===== -->
   <div class="screen active" id="s-landing">
     <div class="topbar">
       <div class="logo">Vi<em>thae</em></div>
-      <div class="top-actions">
-        <div class="ibt" onclick="toggleTheme()" id="tbtn">🌙</div>
-      </div>
+      <div class="top-actions"><div class="ibt" onclick="toggleTheme()" id="tbtn">🌙</div></div>
     </div>
     <div class="scroll">
       <div style="padding:28px 18px 20px;">
@@ -241,18 +231,39 @@ body{display:flex;justify-content:center;align-items:flex-start;padding:20px 0 4
       <div style="padding:24px 18px;">
         <div style="font-family:'Syne',sans-serif;font-size:24px;font-weight:700;color:var(--text);margin-bottom:4px;">Crie sua conta</div>
         <div style="font-size:13px;color:var(--text2);margin-bottom:22px;">Leva menos de 1 minuto.</div>
-        <div class="fg"><label>NOME COMPLETO</label><input type="text" placeholder="Ex: Lucas Ferreira"/></div>
-        <div class="fg"><label>E-MAIL</label><input type="email" placeholder="seu@email.com"/></div>
+        <div class="fg"><label>NOME COMPLETO</label><input type="text" id="cad-nome" placeholder="Ex: Lucas Ferreira"/></div>
+        <div class="fg"><label>E-MAIL</label><input type="email" id="cad-email" placeholder="seu@email.com"/></div>
+        <div class="fg"><label>CELULAR (WhatsApp)</label><input type="tel" id="cad-tel" placeholder="(11) 99999-9999" maxlength="15" oninput="mascararTel(this)"/></div>
         <div class="form-row">
           <div class="fg"><label>SEMESTRE</label>
-            <select><option>1º sem</option><option>2º sem</option><option>3º sem</option><option>4º sem</option><option selected>5º sem</option><option>6º sem</option><option>Internato</option><option>Formado</option></select>
+            <select id="cad-sem"><option>1º sem</option><option>2º sem</option><option>3º sem</option><option>4º sem</option><option selected>5º sem</option><option>6º sem</option><option>Internato</option><option>Formado</option></select>
           </div>
-          <div class="fg"><label>FACULDADE</label><input type="text" placeholder="Ex: USP"/></div>
+          <div class="fg"><label>FACULDADE</label><input type="text" id="cad-fac" placeholder="Ex: USP"/></div>
         </div>
-<div class="fg"><label>CELULAR (WhatsApp)</label><input type="tel" placeholder="(11) 99999-9999" maxlength="15" oninput="mascararTel(this)"/></div>
-<div class="fg"><label>SENHA</label><input type="password" placeholder="Mínimo 8 caracteres"/></div>
-        <button class="btn-p" style="margin-top:8px;" onclick="go('dashboard')">Criar conta →</button>
-        <p style="text-align:center;margin-top:14px;font-size:13px;color:var(--text3);">Já tem conta? <span style="color:var(--accent);cursor:pointer;font-weight:600;">Entrar</span></p>
+        <div class="fg"><label>SENHA</label><input type="password" id="cad-senha" placeholder="Mínimo 8 caracteres"/></div>
+        <button class="btn-p" style="margin-top:8px;" onclick="cadastrar()">Criar conta →</button>
+        <p style="text-align:center;margin-top:14px;font-size:13px;color:var(--text3);">Já tem conta? <span style="color:var(--accent);cursor:pointer;font-weight:600;" onclick="go('login')">Entrar</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== LOGIN ===== -->
+  <div class="screen" id="s-login">
+    <div class="topbar">
+      <div class="logo">Vi<em>thae</em></div>
+      <div class="top-actions">
+        <div class="ibt" onclick="toggleTheme()">🌙</div>
+        <div class="ibt" onclick="go('landing')">✕</div>
+      </div>
+    </div>
+    <div class="scroll">
+      <div style="padding:24px 18px;">
+        <div style="font-family:'Syne',sans-serif;font-size:24px;font-weight:700;color:var(--text);margin-bottom:4px;">Entrar</div>
+        <div style="font-size:13px;color:var(--text2);margin-bottom:22px;">Bem-vindo de volta.</div>
+        <div class="fg"><label>E-MAIL</label><input type="email" id="log-email" placeholder="seu@email.com"/></div>
+        <div class="fg"><label>SENHA</label><input type="password" id="log-senha" placeholder="Sua senha"/></div>
+        <button class="btn-p" style="margin-top:8px;" onclick="login()">Entrar →</button>
+        <p style="text-align:center;margin-top:14px;font-size:13px;color:var(--text3);">Não tem conta? <span style="color:var(--accent);cursor:pointer;font-weight:600;" onclick="go('cadastro')">Criar conta</span></p>
       </div>
     </div>
   </div>
@@ -263,20 +274,19 @@ body{display:flex;justify-content:center;align-items:flex-start;padding:20px 0 4
       <div class="logo">Vi<em>thae</em></div>
       <div class="top-actions">
         <div class="ibt" onclick="toggleTheme()">🌙</div>
-        <div class="ibt">🔔</div>
+        <div class="ibt" onclick="sair()">↩</div>
       </div>
     </div>
     <div class="scroll">
       <div style="padding:18px 18px 12px;">
-        <div style="font-family:'Syne',sans-serif;font-size:22px;font-weight:700;color:var(--text);">Olá, Lucas 👋</div>
+        <div style="font-family:'Syne',sans-serif;font-size:22px;font-weight:700;color:var(--text);" id="dash-greeting">Olá! 👋</div>
         <div style="font-size:13px;color:var(--text2);margin-top:3px;">Semana 18 · Faltam 87 dias para a USP.</div>
       </div>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 18px 16px;">
         <div class="stat"><div class="stat-l">PONTUAÇÃO</div><div class="stat-v g">312</div></div>
-        <div class="stat"><div class="stat-l">CONQUISTAS</div><div class="stat-v">24</div></div>
+        <div class="stat"><div class="stat-l">CONQUISTAS</div><div class="stat-v" id="dash-conquistas">0</div></div>
         <div class="stat"><div class="stat-l">DIAS USP</div><div class="stat-v a">87</div></div>
       </div>
-
       <div class="sec-title">REGISTRO DA SEMANA</div>
       <div class="card">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
@@ -294,7 +304,6 @@ body{display:flex;justify-content:center;align-items:flex-start;padding:20px 0 4
           <button class="btn-sm" onclick="addFeed()">Registrar →</button>
         </div>
       </div>
-
       <div class="sec-title" style="margin-top:4px;">BANCAS</div>
       <div class="banca-row" onclick="nb('analise',document.querySelectorAll('.bi')[3])">
         <div><div class="bn">USP — Clínica Médica</div><div class="bs">312 / 359 pontos</div><div class="pbar"><div class="pfill" style="width:87%"></div></div></div>
@@ -304,33 +313,20 @@ body{display:flex;justify-content:center;align-items:flex-start;padding:20px 0 4
         <div><div class="bn">UNIFESP — Pediatria</div><div class="bs">289 / 400 pontos</div><div class="pbar"><div class="pfill" style="width:72%"></div></div></div>
         <div class="bscore">72%</div>
       </div>
-
       <div class="sec-title" style="margin-top:8px;">ALERTAS</div>
       <div class="alert-row"><div class="adot"></div><div>Inscrições USP Clínica Médica em <strong>87 dias</strong>. Você precisa de mais 47 pontos.</div></div>
       <div class="alert-row"><div class="adot"></div><div>Novo edital UNIFESP disponível — <span style="color:var(--accent);cursor:pointer;font-weight:600;">atualizar análise</span>.</div></div>
-
       <div class="sec-title" style="margin-top:8px;">HISTÓRICO RECENTE</div>
       <div id="feed-container">
         <div class="feed-item">
-          <div class="feed-top">
-            <div class="feed-icon g">🏅</div>
-            <div class="feed-meta"><div class="feed-title">Submissão de resumo — COBEM 2024</div><div class="feed-sub">Conquista · 12 Nov 2024</div></div>
-            <div class="feed-pts">+40 pts</div>
-          </div>
+          <div class="feed-top"><div class="feed-icon g">🏅</div><div class="feed-meta"><div class="feed-title">Submissão de resumo — COBEM 2024</div><div class="feed-sub">Conquista · 12 Nov 2024</div></div><div class="feed-pts">+40 pts</div></div>
         </div>
         <div class="feed-item">
-          <div class="feed-top">
-            <div class="feed-icon a">💡</div>
-            <div class="feed-meta"><div class="feed-title">Entendi o mecanismo da IC50 de verdade</div><div class="feed-sub">Aprendizado · 5 Nov 2024</div></div>
-          </div>
-          <div class="feed-body">Revisando farmacologia percebi que nunca tinha associado IC50 com dose-resposta na prática clínica. Agora faz sentido.</div>
+          <div class="feed-top"><div class="feed-icon a">💡</div><div class="feed-meta"><div class="feed-title">Entendi o mecanismo da IC50 de verdade</div><div class="feed-sub">Aprendizado · 5 Nov 2024</div></div></div>
+          <div class="feed-body">Revisando farmacologia percebi que nunca tinha associado IC50 com dose-resposta na prática clínica.</div>
         </div>
         <div class="feed-item">
-          <div class="feed-top">
-            <div class="feed-icon p">📌</div>
-            <div class="feed-meta"><div class="feed-title">Iniciou IC FAPESP — Oncologia Molecular</div><div class="feed-sub">Projeto · Mar 2024</div></div>
-            <div class="feed-pts">+80 pts</div>
-          </div>
+          <div class="feed-top"><div class="feed-icon p">📌</div><div class="feed-meta"><div class="feed-title">Iniciou IC FAPESP — Oncologia Molecular</div><div class="feed-sub">Projeto · Mar 2024</div></div><div class="feed-pts">+80 pts</div></div>
         </div>
       </div>
       <div style="padding:4px 18px 8px;"><button class="btn-sm-o" style="width:100%;">Ver histórico completo</button></div>
@@ -360,44 +356,61 @@ body{display:flex;justify-content:center;align-items:flex-start;padding:20px 0 4
         <button class="ctab" onclick="switchTab('manual',this)">✏️ Manual</button>
         <button class="ctab" onclick="switchTab('historico',this)">📋 Histórico</button>
       </div>
+
+      <!-- UPLOAD TAB -->
       <div class="cert-panel active" id="tab-upload">
-        <div class="upload-zone">
-          <div style="font-size:32px;margin-bottom:8px;">📁</div>
-          <div style="font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px;">Toque para enviar</div>
-          <div style="font-size:12px;color:var(--text2);">Certificados, diplomas, declarações</div>
+        <div class="upload-zone" id="upload-zone" ondragover="dragOver(event)" ondragleave="dragLeave(event)" ondrop="dropFile(event)">
+          <input type="file" id="file-input" accept=".pdf,.png,.jpg,.jpeg" onchange="handleFile(this.files[0])"/>
+          <div style="font-size:32px;margin-bottom:8px;" id="upload-icon">📁</div>
+          <div style="font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px;" id="upload-title">Toque para enviar</div>
+          <div style="font-size:12px;color:var(--text2);" id="upload-sub">Certificados, diplomas, declarações</div>
           <div style="display:flex;gap:7px;justify-content:center;margin-top:11px;">
             <div class="fmt-tag">PDF</div><div class="fmt-tag">PNG</div><div class="fmt-tag">JPG</div>
           </div>
         </div>
-        <div class="fg"><label>CATEGORIA DO DOCUMENTO</label>
-          <select><option>Certificado de curso</option><option>Liga acadêmica</option><option>Projeto de extensão</option><option>Iniciação científica</option><option>Publicação / resumo</option><option>Monitoria</option><option>Outros</option></select>
+        <div class="upload-progress" id="upload-progress">
+          <div class="upload-progress-fill" id="upload-progress-fill" style="width:0%"></div>
         </div>
-        <button class="btn-p">Enviar para análise</button>
+        <div class="fg" style="margin-top:12px;"><label>CATEGORIA DO DOCUMENTO</label>
+          <select id="upload-categoria">
+            <option>Certificado de curso</option><option>Liga acadêmica</option>
+            <option>Projeto de extensão</option><option>Iniciação científica</option>
+            <option>Publicação / resumo</option><option>Monitoria</option><option>Outros</option>
+          </select>
+        </div>
+        <button class="btn-p" onclick="enviarArquivo()">Enviar para análise</button>
         <div style="margin-top:16px;">
-          <div class="sec-title" style="padding:0;margin-bottom:9px;">ENVIADOS RECENTEMENTE</div>
-          <div class="upl-item"><div class="upl-ic">📜</div><div><div class="upl-name">ACLS_AHA_2024.pdf</div><div class="upl-sub">Certificado de curso · 2,1 MB</div></div><div class="upl-status">Analisado</div></div>
-          <div class="upl-item"><div class="upl-ic">🔬</div><div><div class="upl-name">Declaracao_IC_FAPESP.pdf</div><div class="upl-sub">Iniciação científica · 0,8 MB</div></div><div class="upl-status">Analisado</div></div>
+          <div class="sec-title" style="padding:0;margin-bottom:9px;">ENVIADOS</div>
+          <div id="lista-uploads">
+            <div class="upl-item"><div class="upl-ic">📜</div><div><div class="upl-name">ACLS_AHA_2024.pdf</div><div class="upl-sub">Certificado · 2,1 MB</div></div><div class="upl-status ok">Enviado</div></div>
+          </div>
         </div>
       </div>
+
+      <!-- MANUAL TAB -->
       <div class="cert-panel" id="tab-manual">
-        <div class="fg"><label>TÍTULO / NOME DA ATIVIDADE</label><input type="text" placeholder="Ex: Liga Acadêmica de Cardiologia USP"/></div>
+        <div class="fg"><label>TÍTULO / NOME DA ATIVIDADE</label><input type="text" id="man-titulo" placeholder="Ex: Liga Acadêmica de Cardiologia USP"/></div>
         <div class="fg"><label>CATEGORIA</label>
-          <select><option>Liga acadêmica</option><option>Certificado de curso</option><option>Projeto de extensão</option><option>Iniciação científica</option><option>Publicação</option><option>Monitoria</option><option>Outros</option></select>
+          <select id="man-cat"><option>Liga acadêmica</option><option>Certificado de curso</option><option>Projeto de extensão</option><option>Iniciação científica</option><option>Publicação</option><option>Monitoria</option><option>Outros</option></select>
         </div>
         <div class="form-row">
-          <div class="fg"><label>INÍCIO</label><input type="text" placeholder="Mar 2023"/></div>
-          <div class="fg"><label>FIM</label><input type="text" placeholder="Em andamento"/></div>
+          <div class="fg"><label>INÍCIO</label><input type="text" id="man-inicio" placeholder="Mar 2023"/></div>
+          <div class="fg"><label>FIM</label><input type="text" id="man-fim" placeholder="Em andamento"/></div>
         </div>
-        <div class="fg"><label>INSTITUIÇÃO</label><input type="text" placeholder="Ex: USP — FMUSP"/></div>
-        <div class="fg"><label>DESCRIÇÃO (opcional)</label><textarea rows="3" placeholder="Carga horária, resultados, atividades..."></textarea></div>
-        <button class="btn-p">Salvar no histórico</button>
+        <div class="fg"><label>INSTITUIÇÃO</label><input type="text" id="man-inst" placeholder="Ex: USP — FMUSP"/></div>
+        <div class="fg"><label>DESCRIÇÃO (opcional)</label><textarea id="man-desc" rows="3" placeholder="Carga horária, resultados, atividades..."></textarea></div>
+        <button class="btn-p" onclick="salvarManual()">Salvar no histórico</button>
       </div>
+
+      <!-- HISTORICO TAB -->
       <div class="cert-panel" id="tab-historico">
-        <div class="upl-item"><div class="upl-ic">🔬</div><div><div class="upl-name">IC FAPESP — Oncologia Molecular</div><div class="upl-sub">Iniciação científica · Em andamento</div></div><div class="upl-status">+80 pts</div></div>
-        <div class="upl-item"><div class="upl-ic">📜</div><div><div class="upl-name">ACLS — American Heart Association</div><div class="upl-sub">Certificado de curso · 2024</div></div><div class="upl-status">+30 pts</div></div>
-        <div class="upl-item"><div class="upl-ic">🏥</div><div><div class="upl-name">Liga Acadêmica de Cardiologia</div><div class="upl-sub">Liga acadêmica · 2023–2024</div></div><div class="upl-status">+20 pts</div></div>
-        <div class="upl-item"><div class="upl-ic">📝</div><div><div class="upl-name">Resumo COBEM 2024</div><div class="upl-sub">Publicação · Nov 2024</div></div><div class="upl-status">+40 pts</div></div>
-        <div style="margin-top:10px;"><button class="btn-sm-o" style="width:100%;">+ Adicionar novo</button></div>
+        <div id="historico-lista">
+          <div class="upl-item"><div class="upl-ic">🔬</div><div><div class="upl-name">IC FAPESP — Oncologia Molecular</div><div class="upl-sub">IC · Em andamento</div></div><div class="upl-status ok">+80 pts</div></div>
+          <div class="upl-item"><div class="upl-ic">📜</div><div><div class="upl-name">ACLS — AHA</div><div class="upl-sub">Certificado · 2024</div></div><div class="upl-status ok">+30 pts</div></div>
+          <div class="upl-item"><div class="upl-ic">🏥</div><div><div class="upl-name">Liga Acadêmica de Cardiologia</div><div class="upl-sub">Liga · 2023–2024</div></div><div class="upl-status ok">+20 pts</div></div>
+          <div class="upl-item"><div class="upl-ic">📝</div><div><div class="upl-name">Resumo COBEM 2024</div><div class="upl-sub">Publicação · Nov 2024</div></div><div class="upl-status ok">+40 pts</div></div>
+        </div>
+        <div style="margin-top:10px;"><button class="btn-sm-o" style="width:100%;" onclick="switchTab('manual',document.querySelectorAll('.ctab')[1])">+ Adicionar novo</button></div>
       </div>
     </div>
     <div class="bnav">
@@ -416,7 +429,7 @@ body{display:flex;justify-content:center;align-items:flex-start;padding:20px 0 4
     </div>
     <div class="scroll">
       <div style="padding:18px 18px 8px;">
-        <div style="font-family:'Syne',sans-serif;font-size:20px;font-weight:700;color:var(--text);">Sua trilha</div>
+        <div style="font-family:'Syne',sans-serif;font-size:20px;font-weight:700;color:var(--text);" id="trilha-nome">Sua trilha</div>
         <div style="font-size:13px;color:var(--text2);margin-top:2px;">5º semestre · USP Medicina · 312 pts</div>
       </div>
       <div style="display:flex;gap:6px;padding:0 18px 14px;overflow-x:auto;">
@@ -429,11 +442,7 @@ body{display:flex;justify-content:center;align-items:flex-start;padding:20px 0 4
       <div style="padding:0 18px;">
         <div class="fase-block">
           <div class="fase-line"></div>
-          <div class="fase-header">
-            <div class="fase-dot done">✓</div>
-            <div class="fase-info"><h3>Pré-clínico</h3><p>1º ao 4º semestre</p></div>
-            <div class="fase-tag done">Concluído</div>
-          </div>
+          <div class="fase-header"><div class="fase-dot done">✓</div><div class="fase-info"><h3>Pré-clínico</h3><p>1º ao 4º semestre</p></div><div class="fase-tag done">Concluído</div></div>
           <div class="marcos">
             <div class="marco"><div class="marco-ic g">🏥</div><div class="marco-text"><h4>Liga de Cardiologia</h4><p>USP · 2023</p></div><div class="marco-pts">+20 pts</div></div>
             <div class="marco"><div class="marco-ic g">📜</div><div class="marco-text"><h4>ACLS — AHA</h4><p>Certificado · 2023</p></div><div class="marco-pts">+30 pts</div></div>
@@ -441,11 +450,7 @@ body{display:flex;justify-content:center;align-items:flex-start;padding:20px 0 4
         </div>
         <div class="fase-block">
           <div class="fase-line"></div>
-          <div class="fase-header">
-            <div class="fase-dot curr">●</div>
-            <div class="fase-info"><h3>Clínico</h3><p>5º ao 8º semestre</p></div>
-            <div class="fase-tag curr">Em curso</div>
-          </div>
+          <div class="fase-header"><div class="fase-dot curr">●</div><div class="fase-info"><h3>Clínico</h3><p>5º ao 8º semestre</p></div><div class="fase-tag curr">Em curso</div></div>
           <div class="marcos">
             <div class="marco"><div class="marco-ic g">🧪</div><div class="marco-text"><h4>IC FAPESP</h4><p>Em andamento · 2024</p></div><div class="marco-pts">+80 pts</div></div>
             <div class="marco"><div class="marco-ic g">📝</div><div class="marco-text"><h4>Resumo COBEM 2024</h4><p>Publicado · Nov 2024</p></div><div class="marco-pts">+40 pts</div></div>
@@ -455,22 +460,14 @@ body{display:flex;justify-content:center;align-items:flex-start;padding:20px 0 4
         </div>
         <div class="fase-block">
           <div class="fase-line"></div>
-          <div class="fase-header">
-            <div class="fase-dot fut">○</div>
-            <div class="fase-info"><h3>Internato</h3><p>9º ao 12º semestre</p></div>
-            <div class="fase-tag fut">Em breve</div>
-          </div>
+          <div class="fase-header"><div class="fase-dot fut">○</div><div class="fase-info"><h3>Internato</h3><p>9º ao 12º semestre</p></div><div class="fase-tag fut">Em breve</div></div>
           <div class="marcos">
             <div class="marco dim"><div class="marco-ic n">🏥</div><div class="marco-text"><h4>Estágio eletivo</h4><p>Planejado</p></div><div class="marco-pts" style="color:var(--text3);">+60 pts</div></div>
             <div class="marco dim"><div class="marco-ic n">📋</div><div class="marco-text"><h4>Artigo em periódico</h4><p>Meta · Qualis B2+</p></div><div class="marco-pts" style="color:var(--red);">faltam 40</div></div>
           </div>
         </div>
         <div class="fase-block">
-          <div class="fase-header">
-            <div class="fase-dot fut">○</div>
-            <div class="fase-info"><h3>Residência</h3><p>Inscrição e prova</p></div>
-            <div class="fase-tag fut">Meta final</div>
-          </div>
+          <div class="fase-header"><div class="fase-dot fut">○</div><div class="fase-info"><h3>Residência</h3><p>Inscrição e prova</p></div><div class="fase-tag fut">Meta final</div></div>
           <div class="marcos">
             <div class="marco dim"><div class="marco-ic n">🏆</div><div class="marco-text"><h4>Aprovação USP — Clínica Médica</h4><p>Objetivo principal</p></div><div class="marco-pts" style="color:var(--text3);">🎯</div></div>
           </div>
@@ -537,9 +534,7 @@ body{display:flex;justify-content:center;align-items:flex-start;padding:20px 0 4
           <div id="score-hero-wrap"></div>
           <div class="sec-title" style="margin-top:4px;">ANÁLISE DETALHADA</div>
           <div class="stream-box" id="stream-output"><span class="cursor"></span></div>
-          <div style="padding:0 18px 16px;">
-            <button class="btn-p" onclick="resetar()">← Nova análise</button>
-          </div>
+          <div style="padding:0 18px 16px;"><button class="btn-p" onclick="resetar()">← Nova análise</button></div>
         </div>
       </div>
     </div>
@@ -554,54 +549,273 @@ body{display:flex;justify-content:center;align-items:flex-start;padding:20px 0 4
 </div>
 
 <script>
-let dark=false, bancaSelecionada='usp';
+// ─── CONFIG ───────────────────────────────────────────────
+const CLOUDINARY_CLOUD = 'db7ctx96s';
+const CLOUDINARY_PRESET = 'vithae_uploads'; // unsigned preset — crie no painel Cloudinary
+const CLOUDINARY_URL = `https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD}/auto/upload`;
 
+// ─── ESTADO ───────────────────────────────────────────────
+let dark = false;
+let bancaSelecionada = 'usp';
+let arquivoSelecionado = null;
+let usuario = JSON.parse(localStorage.getItem('vithae_user') || 'null');
+let feedItems = JSON.parse(localStorage.getItem('vithae_feed') || '[]');
+let docs = JSON.parse(localStorage.getItem('vithae_docs') || '[]');
+
+// ─── INIT ─────────────────────────────────────────────────
+window.onload = function(){
+  if(usuario) entrarDashboard();
+  renderFeed();
+  renderDocs();
+};
+
+// ─── NAVEGAÇÃO ────────────────────────────────────────────
+function go(s){
+  document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));
+  document.getElementById('s-'+s).classList.add('active');
+  window.scrollTo(0,0);
+}
+function nb(s,btn){
+  go(s);
+  document.querySelectorAll('.bi').forEach(x=>x.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+}
+
+// ─── TEMA ─────────────────────────────────────────────────
+function toggleTheme(){
+  dark=!dark;
+  document.getElementById('phone').classList.toggle('dark',dark);
+  document.querySelectorAll('[onclick="toggleTheme()"]').forEach(b=>b.textContent=dark?'☀️':'🌙');
+}
+
+// ─── TOAST ────────────────────────────────────────────────
+function toast(msg, dur=2500){
+  const t=document.getElementById('toast');
+  t.textContent=msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), dur);
+}
+
+// ─── MÁSCARA TEL ──────────────────────────────────────────
+function mascararTel(el){
+  let v=el.value.replace(/\D/g,'');
+  if(v.length<=2) v=v.replace(/^(\d{0,2})/,'($1');
+  else if(v.length<=7) v=v.replace(/^(\d{2})(\d{0,5})/,'($1) $2');
+  else v=v.replace(/^(\d{2})(\d{5})(\d{0,4}).*/,'($1) $2-$3');
+  el.value=v;
+}
+
+// ─── CADASTRO ─────────────────────────────────────────────
+function cadastrar(){
+  const nome=document.getElementById('cad-nome').value.trim();
+  const email=document.getElementById('cad-email').value.trim();
+  const tel=document.getElementById('cad-tel').value.trim();
+  const sem=document.getElementById('cad-sem').value;
+  const fac=document.getElementById('cad-fac').value.trim();
+  const senha=document.getElementById('cad-senha').value;
+  if(!nome||!email||!tel||!senha){toast('⚠️ Preencha todos os campos');return;}
+  if(senha.length<8){toast('⚠️ Senha precisa ter 8+ caracteres');return;}
+  usuario={nome,email,tel,sem,fac,senha,criadoEm:new Date().toISOString()};
+  localStorage.setItem('vithae_user', JSON.stringify(usuario));
+  entrarDashboard();
+  toast('✅ Conta criada com sucesso!');
+}
+
+// ─── LOGIN ────────────────────────────────────────────────
+function login(){
+  const email=document.getElementById('log-email').value.trim();
+  const senha=document.getElementById('log-senha').value;
+  const u=JSON.parse(localStorage.getItem('vithae_user')||'null');
+  if(!u||u.email!==email||u.senha!==senha){toast('⚠️ E-mail ou senha incorretos');return;}
+  usuario=u;
+  entrarDashboard();
+  toast('✅ Bem-vindo de volta!');
+}
+
+function entrarDashboard(){
+  if(usuario){
+    document.getElementById('dash-greeting').textContent=`Olá, ${usuario.nome.split(' ')[0]}! 👋`;
+    document.getElementById('trilha-nome').textContent=`Trilha de ${usuario.nome.split(' ')[0]}`;
+  }
+  go('dashboard');
+  document.querySelectorAll('.bi')[0].classList.add('active');
+}
+
+function sair(){
+  usuario=null;
+  go('landing');
+  toast('Até logo!');
+}
+
+// ─── FEED SEMANAL ─────────────────────────────────────────
+function selTipo(el){
+  document.querySelectorAll('.wtype').forEach(x=>x.classList.remove('on'));
+  el.classList.add('on');
+}
+
+function addFeed(){
+  const ta=document.getElementById('week-input');
+  const txt=ta.value.trim();
+  if(!txt){toast('⚠️ Escreva algo primeiro');return;}
+  const tipo=document.querySelector('.wtype.on');
+  const label=tipo?tipo.textContent:'🏅 Conquista';
+  const icons={'🏅':'g','💡':'a','📌':'p','💭':'p'};
+  const emoji=label.split(' ')[0];
+  const cls=icons[emoji]||'g';
+  const now=new Date();
+  const dataStr=now.toLocaleDateString('pt-BR',{day:'numeric',month:'short',year:'numeric'});
+  const entry={txt,label,emoji,cls,dataStr,id:Date.now()};
+  feedItems.unshift(entry);
+  localStorage.setItem('vithae_feed', JSON.stringify(feedItems));
+  renderFeed();
+  ta.value='';
+  document.getElementById('dash-conquistas').textContent=feedItems.length;
+  toast('🏅 Conquista registrada!');
+}
+
+function renderFeed(){
+  if(!feedItems.length) return;
+  const c=document.getElementById('feed-container');
+  const novos=feedItems.slice(0,5).map(e=>`
+    <div class="feed-item">
+      <div class="feed-top">
+        <div class="feed-icon ${e.cls}">${e.emoji}</div>
+        <div class="feed-meta">
+          <div class="feed-title">${e.txt.substring(0,60)}${e.txt.length>60?'...':''}</div>
+          <div class="feed-sub">${e.label.substring(2)} · ${e.dataStr}</div>
+        </div>
+      </div>
+    </div>`).join('');
+  c.innerHTML=novos;
+  document.getElementById('dash-conquistas').textContent=feedItems.length;
+}
+
+// ─── UPLOAD CLOUDINARY ────────────────────────────────────
+function dragOver(e){e.preventDefault();document.getElementById('upload-zone').style.borderColor='var(--accent)';}
+function dragLeave(){document.getElementById('upload-zone').style.borderColor='';}
+function dropFile(e){e.preventDefault();dragLeave();const f=e.dataTransfer.files[0];if(f)setArquivo(f);}
+
+function handleFile(f){if(f)setArquivo(f);}
+
+function setArquivo(f){
+  arquivoSelecionado=f;
+  document.getElementById('upload-icon').textContent='📄';
+  document.getElementById('upload-title').textContent=f.name;
+  document.getElementById('upload-sub').textContent=(f.size/1024/1024).toFixed(1)+' MB';
+  toast('📄 Arquivo selecionado!');
+}
+
+async function enviarArquivo(){
+  if(!arquivoSelecionado){toast('⚠️ Selecione um arquivo primeiro');return;}
+  const cat=document.getElementById('upload-categoria').value;
+  const prog=document.getElementById('upload-progress');
+  const fill=document.getElementById('upload-progress-fill');
+  prog.style.display='block';
+  fill.style.width='10%';
+
+  const formData=new FormData();
+  formData.append('file', arquivoSelecionado);
+  formData.append('upload_preset', CLOUDINARY_PRESET);
+  formData.append('folder', 'vithae');
+  formData.append('tags', cat.replace(/ /g,'_'));
+
+  try{
+    fill.style.width='40%';
+    const res=await fetch(CLOUDINARY_URL,{method:'POST',body:formData});
+    fill.style.width='80%';
+    const data=await res.json();
+    if(data.secure_url){
+      fill.style.width='100%';
+      setTimeout(()=>{prog.style.display='none';fill.style.width='0%';},800);
+      const doc={nome:arquivoSelecionado.name,cat,url:data.secure_url,tamanho:(arquivoSelecionado.size/1024/1024).toFixed(1)+' MB',data:new Date().toLocaleDateString('pt-BR'),id:Date.now()};
+      docs.unshift(doc);
+      localStorage.setItem('vithae_docs', JSON.stringify(docs));
+      renderDocs();
+      arquivoSelecionado=null;
+      document.getElementById('upload-icon').textContent='📁';
+      document.getElementById('upload-title').textContent='Toque para enviar';
+      document.getElementById('upload-sub').textContent='Certificados, diplomas, declarações';
+      toast('✅ Arquivo enviado com sucesso!');
+    } else {
+      throw new Error(data.error?.message||'Erro no upload');
+    }
+  }catch(err){
+    prog.style.display='none';
+    fill.style.width='0%';
+    toast('❌ Erro: configure o preset no Cloudinary');
+    console.error(err);
+  }
+}
+
+function renderDocs(){
+  const lista=document.getElementById('lista-uploads');
+  const hist=document.getElementById('historico-lista');
+  if(!docs.length) return;
+  const html=docs.map(d=>`
+    <div class="upl-item">
+      <div class="upl-ic">📄</div>
+      <div>
+        <div class="upl-name">${d.nome}</div>
+        <div class="upl-sub">${d.cat} · ${d.tamanho}</div>
+      </div>
+      <div class="upl-status ok">Enviado</div>
+    </div>`).join('');
+  lista.innerHTML=html;
+  hist.innerHTML=html+hist.innerHTML;
+}
+
+// ─── MANUAL ───────────────────────────────────────────────
+function salvarManual(){
+  const titulo=document.getElementById('man-titulo').value.trim();
+  const cat=document.getElementById('man-cat').value;
+  const inicio=document.getElementById('man-inicio').value.trim();
+  const fim=document.getElementById('man-fim').value.trim();
+  const inst=document.getElementById('man-inst').value.trim();
+  const desc=document.getElementById('man-desc').value.trim();
+  if(!titulo){toast('⚠️ Preencha o título');return;}
+  const doc={nome:titulo,cat,periodo:`${inicio}${fim?' – '+fim:''}`,inst,desc,manual:true,id:Date.now()};
+  docs.unshift(doc);
+  localStorage.setItem('vithae_docs', JSON.stringify(docs));
+  renderDocs();
+  document.getElementById('man-titulo').value='';
+  document.getElementById('man-inicio').value='';
+  document.getElementById('man-fim').value='';
+  document.getElementById('man-inst').value='';
+  document.getElementById('man-desc').value='';
+  toast('✅ Atividade salva no histórico!');
+  switchTab('historico', document.querySelectorAll('.ctab')[2]);
+}
+
+// ─── ABAS CERTIFICADOS ────────────────────────────────────
+function switchTab(t,btn){
+  document.querySelectorAll('.ctab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.cert-panel').forEach(x=>x.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tab-'+t).classList.add('active');
+}
+
+// ─── ANÁLISE IA ───────────────────────────────────────────
 const editais={
   usp:{nome:'USP — Clínica Médica 2024',criterios:`EDITAL USP FMUSP — RESIDÊNCIA CLÍNICA MÉDICA 2024\nPontuação máxima: 359 pontos\n\n1. IC com bolsa FAPESP/CNPq/CAPES: 80 pts, máx 2\n2. IC voluntária: 40 pts, máx 2\n3. Publicação Qualis A1-A2: 60 pts, máx 3\n4. Publicação Qualis B1-B2: 40 pts, máx 3\n5. Resumo congresso nacional: 25 pts, máx 4\n6. Resumo congresso internacional: 40 pts, máx 2\n7. Apresentação oral: 30 pts, máx 2\n8. Certificado curso ≥40h: 20 pts, máx 4\n9. ACLS/BLS/ATLS: 30 pts, máx 2\n10. Liga acadêmica membro ativo ≥1 ano: 20 pts, máx 3\n11. Liga acadêmica diretor: 35 pts, máx 2\n12. Monitoria clínica semestral: 20 pts, máx 4\n13. Extensão universitária: 15 pts, máx 3\n14. Prêmio acadêmico: 25 pts, máx 2`},
   unifesp:{nome:'UNIFESP — Pediatria 2024',criterios:`EDITAL UNIFESP — RESIDÊNCIA PEDIATRIA 2024\nPontuação máxima: 400 pontos\n\n1. IC com bolsa: 70 pts, máx 2\n2. IC voluntária: 35 pts, máx 2\n3. Publicação A1-B1: 50 pts, máx 4\n4. Publicação B2-B4: 30 pts, máx 4\n5. Resumo congresso nacional: 20 pts, máx 5\n6. PALS: 40 pts\n7. BLS/ACLS: 25 pts, máx 2\n8. Liga pediatria ≥1 ano: 25 pts, máx 3\n9. Monitoria: 15 pts/semestre, máx 5\n10. Extensão: 20 pts, máx 3\n11. Estágio eletivo pediátrico: 30 pts, máx 2`},
   unicamp:{nome:'UNICAMP — Cirurgia Geral 2024',criterios:`EDITAL UNICAMP — RESIDÊNCIA CIRURGIA GERAL 2024\nPontuação máxima: 420 pontos\n\n1. IC com bolsa: 90 pts, máx 2\n2. IC voluntária: 45 pts, máx 2\n3. Publicação A1-A2: 70 pts, máx 3\n4. Publicação B1-B2: 45 pts, máx 3\n5. Resumo congresso: 20 pts, máx 4\n6. ATLS: 50 pts\n7. ACLS/BLS: 25 pts, máx 2\n8. Liga cirurgia/trauma ≥1 ano: 30 pts, máx 2\n9. Estágio cirurgia mín 4 semanas: 40 pts, máx 3\n10. Monitoria anatomia/cirurgia: 25 pts, máx 3\n11. Extensão: 15 pts, máx 3`}
 };
 
-function go(s){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));document.getElementById('s-'+s).classList.add('active');window.scrollTo(0,0);}
-function nb(s,btn){go(s);document.querySelectorAll('.bi').forEach(x=>x.classList.remove('active'));if(btn)btn.classList.add('active');}
-function toggleTheme(){dark=!dark;document.getElementById('phone').classList.toggle('dark',dark);document.querySelectorAll('[onclick="toggleTheme()"]').forEach(b=>b.textContent=dark?'☀️':'🌙');}
-function selTipo(el){document.querySelectorAll('.wtype').forEach(x=>x.classList.remove('on'));el.classList.add('on');}
-function switchTab(t,btn){document.querySelectorAll('.ctab').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.cert-panel').forEach(x=>x.classList.remove('active'));btn.classList.add('active');document.getElementById('tab-'+t).classList.add('active');}
 function setBanca(btn,id){document.querySelectorAll('.bsw').forEach(b=>b.classList.remove('active'));btn.classList.add('active');bancaSelecionada=id;}
-
-function addFeed(){
-  const ta=document.getElementById('week-input');
-  const txt=ta.value.trim();
-  if(!txt)return;
-  const tipo=document.querySelector('.wtype.on');
-  const label=tipo?tipo.textContent:'🏅 Conquista';
-  const icons={'🏅':'g','💡':'a','📌':'p','💭':'p'};
-  const emoji=label.split(' ')[0];
-  const cls=icons[emoji]||'g';
-  const item=document.createElement('div');
-  item.className='feed-item';
-  item.innerHTML=`<div class="feed-top"><div class="feed-icon ${cls}">${emoji}</div><div class="feed-meta"><div class="feed-title">${txt.substring(0,60)}${txt.length>60?'...':''}</div><div class="feed-sub">${label.substring(2)} · Hoje</div></div></div>`;
-  document.getElementById('feed-container').prepend(item);
-  ta.value='';
-}
-
-function preencherExemplo(){
-  document.getElementById('curriculo-input').value='Tenho IC pela FAPESP em oncologia molecular desde março de 2024, ainda em andamento. Fiz o curso de ACLS pela American Heart Association em 2023. Participei da Liga Acadêmica de Cardiologia da USP por 2 anos como membro ativo. Publiquei um resumo no COBEM 2024. Estou no 5º semestre da FMUSP.';
-  document.getElementById('extra-input').value='Quero priorizar a USP Clínica Médica. Tenho 87 dias até a inscrição.';
-}
+function preencherExemplo(){document.getElementById('curriculo-input').value='Tenho IC pela FAPESP em oncologia molecular desde março de 2024, ainda em andamento. Fiz o curso de ACLS pela American Heart Association em 2023. Participei da Liga Acadêmica de Cardiologia da USP por 2 anos como membro ativo. Publiquei um resumo no COBEM 2024. Estou no 5º semestre da FMUSP.';document.getElementById('extra-input').value='Quero priorizar a USP Clínica Médica. Tenho 87 dias até a inscrição.';}
 
 async function analisar(){
   const curriculo=document.getElementById('curriculo-input').value.trim();
   const extra=document.getElementById('extra-input').value.trim();
-  if(!curriculo){document.getElementById('curriculo-input').focus();return;}
+  if(!curriculo){document.getElementById('curriculo-input').focus();toast('⚠️ Descreva suas atividades primeiro');return;}
   document.getElementById('tela-form').style.display='none';
   document.getElementById('tela-resultado').style.display='block';
   document.getElementById('loading-state').style.display='flex';
   document.getElementById('resultado-state').style.display='none';
   const edital=editais[bancaSelecionada];
-  const prompt=`Você é o motor de análise curricular da Vithae, plataforma para candidatos à residência médica no Brasil.\n\nEDITAL DA BANCA:\n${edital.criterios}\n\nCURRÍCULO DO CANDIDATO:\n${curriculo}${extra?'\n\nOBSERVAÇÕES:\n'+extra:''}\n\nFaça uma análise completa e personalizada. Responda em português, como um mentor experiente e encorajador.\n\nEstruture assim:\n\nPONTUAÇÃO ESTIMADA: [X de Y pontos] ([Z]%)\n\nRESUMO: [2-3 frases sobre o perfil]\n\nO QUE VOCÊ TEM:\n• [atividade]: +[X] pts — [comentário]\n\nO QUE ESTÁ FALTANDO:\n• [categoria]: −[X] pts potenciais — [como conseguir]\n\nPRÓXIMOS 3 PASSOS:\n1. [ação concreta com prazo]\n2. [ação concreta]\n3. [ação concreta]\n\nMENSAGEM FINAL: [frase honesta e motivadora]`;
+  const prompt=`Você é o motor de análise curricular da Vithae.\n\nEDITAL:\n${edital.criterios}\n\nCURRÍCULO:\n${curriculo}${extra?'\n\nOBSERVAÇÕES:\n'+extra:''}\n\nAnalise e estruture assim:\n\nPONTUAÇÃO ESTIMADA: [X de Y pontos] ([Z]%)\n\nRESUMO: [2-3 frases]\n\nO QUE VOCÊ TEM:\n• [atividade]: +[X] pts — [comentário]\n\nO QUE ESTÁ FALTANDO:\n• [categoria]: −[X] pts — [como conseguir]\n\nPRÓXIMOS 3 PASSOS:\n1. [ação com prazo]\n2. [ação]\n3. [ação]\n\nMENSAGEM FINAL: [frase motivadora]`;
   try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,stream:true,system:'Você é o motor de análise curricular da Vithae. Responda sempre em português brasileiro, de forma clara, específica e encorajadora.',messages:[{role:'user',content:prompt}]})});
+    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,stream:true,system:'Você é o motor de análise curricular da Vithae. Responda sempre em português brasileiro, de forma clara e encorajadora.',messages:[{role:'user',content:prompt}]})});
     document.getElementById('loading-state').style.display='none';
     document.getElementById('resultado-state').style.display='block';
     document.getElementById('banca-label').textContent=edital.nome;
@@ -609,11 +823,11 @@ async function analisar(){
     so.innerHTML='<span class="cursor"></span>';
     let full='';
     const reader=res.body.getReader();
-    const decoder=new TextDecoder();
+    const dec=new TextDecoder();
     while(true){
       const{done,value}=await reader.read();
       if(done)break;
-      const chunk=decoder.decode(value,{stream:true});
+      const chunk=dec.decode(value,{stream:true});
       for(const line of chunk.split('\n')){
         if(line.startsWith('data: ')){
           const data=line.slice(6);
@@ -626,16 +840,14 @@ async function analisar(){
     const mp=full.match(/(\d{1,3})%/);
     const ms=full.match(/(\d{2,3})\s*de\s*(\d{2,3})\s*pontos/i);
     document.getElementById('score-hero-wrap').innerHTML=`<div class="score-hero"><div class="ring"><span>${mp?mp[1]:'—'}%</span></div><div class="ring-info"><h3>${edital.nome}</h3><p>${ms?ms[1]+' de '+ms[2]+' pontos':'Ver análise abaixo'}</p></div></div>`;
-  }catch(err){document.getElementById('loading-state').style.display='none';document.getElementById('resultado-state').style.display='block';document.getElementById('stream-output').textContent='Erro ao conectar. Tente novamente.';}
+  }catch(err){
+    document.getElementById('loading-state').style.display='none';
+    document.getElementById('resultado-state').style.display='block';
+    document.getElementById('stream-output').textContent='Erro ao conectar. Tente novamente.';
+  }
 }
 
-function mascararTel(el){
-  let v=el.value.replace(/\D/g,'');
-  if(v.length<=2) v=v.replace(/^(\d{0,2})/,'($1');
-  else if(v.length<=7) v=v.replace(/^(\d{2})(\d{0,5})/,'($1) $2');
-  else v=v.replace(/^(\d{2})(\d{5})(\d{0,4}).*/,'($1) $2-$3');
-  el.value=v;
-}function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function resetar(){document.getElementById('tela-form').style.display='block';document.getElementById('tela-resultado').style.display='none';}
 </script>
 </body>
