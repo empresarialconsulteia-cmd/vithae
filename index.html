@@ -249,7 +249,8 @@ body{display:flex;justify-content:center;align-items:flex-start;padding:20px 0 4
           </div>
           <div class="fg"><label>FACULDADE</label><input type="text" placeholder="Ex: USP"/></div>
         </div>
-        <div class="fg"><label>SENHA</label><input type="password" placeholder="Mínimo 8 caracteres"/></div>
+<div class="fg"><label>CELULAR (WhatsApp)</label><input type="tel" placeholder="(11) 99999-9999" maxlength="15" oninput="mascararTel(this)"/></div>
+<div class="fg"><label>SENHA</label><input type="password" placeholder="Mínimo 8 caracteres"/></div>
         <button class="btn-p" style="margin-top:8px;" onclick="go('dashboard')">Criar conta →</button>
         <p style="text-align:center;margin-top:14px;font-size:13px;color:var(--text3);">Já tem conta? <span style="color:var(--accent);cursor:pointer;font-weight:600;">Entrar</span></p>
       </div>
@@ -628,7 +629,13 @@ async function analisar(){
   }catch(err){document.getElementById('loading-state').style.display='none';document.getElementById('resultado-state').style.display='block';document.getElementById('stream-output').textContent='Erro ao conectar. Tente novamente.';}
 }
 
-function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function mascararTel(el){
+  let v=el.value.replace(/\D/g,'');
+  if(v.length<=2) v=v.replace(/^(\d{0,2})/,'($1');
+  else if(v.length<=7) v=v.replace(/^(\d{2})(\d{0,5})/,'($1) $2');
+  else v=v.replace(/^(\d{2})(\d{5})(\d{0,4}).*/,'($1) $2-$3');
+  el.value=v;
+}function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function resetar(){document.getElementById('tela-form').style.display='block';document.getElementById('tela-resultado').style.display='none';}
 </script>
 </body>
